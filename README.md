@@ -8,7 +8,7 @@ In this Project I used Python to find spending patterns from over 50k tranaction
 
 The dataset used for this project was found on [Kaggle](https://www.kaggle.com/datasets/rajatsurana979/comprehensive-credit-card-transactions-dataset/data)
 
-U can find the ipynb file and Tableau Here: [Ipymb](https://github.com/AshtonJaubert/Portfolio/blob/main/CardTransactions.ipynb) [Tableau](https://public.tableau.com/app/profile/ashton.jaubert/viz/TransactionDataAnalysis_17097954017460/Dashboard1)
+U can find the ipynb file and Dashboard Here: [Ipymb](https://github.com/AshtonJaubert/Portfolio/blob/main/CardTransactions.ipynb) [Tableau](https://public.tableau.com/app/profile/ashton.jaubert/viz/TransactionDataAnalysis_17097954017460/Dashboard1)
 #### Libaries used: 
 - Pandas
 - numPy 
