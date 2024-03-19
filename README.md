@@ -29,7 +29,7 @@ In This Machine Learning Project I will be working with a Housing Loan dataset t
 
 The dataset used for this was found on [Kaggle](https://www.kaggle.com/datasets/architsharma01/loan-approval-prediction-dataset/data)
 
-U can find the ipynm file for this project here: [ipynb](https://github.com/AshtonJaubert/Portfolio/blob/main/LoanApproval.ipynb)
+U can find the ipymb file for this project here: [ipynb](https://github.com/AshtonJaubert/Portfolio/blob/main/LoanApproval.ipynb)
 #### Libraries used:
 - numpy
 - pandas
@@ -37,3 +37,6 @@ U can find the ipynm file for this project here: [ipynb](https://github.com/Asht
 - seaborn
 - sklearn
 - XGBoost
+## Global GDP Tableau Dashboard
+In this project I showed data visualization of GDP values of over 150 different countries from 1950-2019 Through Tableau 
+This Dashboard as well as my other dashboards I have created are seen [here](https://public.tableau.com/shared/G78HPBJ2X?:display_count=n&:origin=viz_share_link)
