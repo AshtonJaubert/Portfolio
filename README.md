@@ -24,3 +24,9 @@ SQL Script from Project: [BalanceOfTrade](https://github.com/AshtonJaubert/Portf
 #### RDBMS Used:
 - MySQL
 
+## Housing Loan Approval Prediction(Classification)
+In This Machine Learning Project I will be working with a Housing loan dataset that has features such as # of Depenednts, Credit Score, loan amount ,etc to depict whether or not the person will be approved for the loan they applied to. I created several models to determine the best model to use to predict whether or not the person will get approved of the loan
+
+The dataset used for this was found on [Kaggle](https://www.kaggle.com/datasets/architsharma01/loan-approval-prediction-dataset/data)
+
+U Can find the ipynm file for this 
