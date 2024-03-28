@@ -18,14 +18,25 @@ U can find the ipynb file and Dashboard Here: [Ipymb](https://github.com/AshtonJ
 ## Balance Of Trade SQL
 In this SQL Project I created sub queries from the data of the Imports and Exports from over 100 Countries from 1960-2021 to answer specific questions asked about the data.
 
+Used aggregate functions such as SUM,AVG,MAX to locate export and import patterns and compare countries from one another.
+ 
+
+
 Dataset Used for this Project can be found on [OurWorldinData.org](https://ourworldindata.org/economic-growth)
 
 SQL Script from Project: [BalanceOfTrade](https://github.com/AshtonJaubert/Portfolio/blob/main/Imports%26Exports.sql)
 #### RDBMS Used:
 - MySQL
+ 
+
 
 ## Housing Loan Approval Prediction(Classification)
-In This Machine Learning Project I will be working with a Housing Loan dataset that has features such as # of Depenedents, Credit Score, loan amount ,etc to depict whether or not the person will be approved for the loan they applied to. I created several models to determine the best model to use to predict whether or not the person will get approved of the loan.
+In This Machine Learning Project I will be working with a Housing Loan dataset that has features such as # of Depenedents, Credit Score, loan amount ,etc to depict whether or not the person will be approved for the loan they applied to. 
+
+Created several models such as Decision Tree, Random Forest etc, to determine the best model to use to predict whether or not the person will get approved of the loan. •
+ 
+Developed an XGBoost and Random Forest model with accuracy scores of 98%+
+
 
 The dataset used for this was found on [Kaggle](https://www.kaggle.com/datasets/architsharma01/loan-approval-prediction-dataset/data)
 
@@ -38,6 +49,12 @@ U can find the ipymb file for this project here: [ipynb](https://github.com/Asht
 - sklearn
 - XGBoost
 ## Global GDP Tableau Dashboard
-In this project I showed data visualization of GDP values of over 150 different countries from 1950-2019 Through Tableau 
+
+- Created an Interactive Dashboard from Tableau to show GDP values of different countries from 1950-2019 
+
+- Provided filter tabs of Yearly and Country Values to see the total GDP of the Country from 1950-2019 or In specific Years
+
+- Allows Users to see how the GDP of countries  fluctuates from year to year and who led the globe in total GDP from each year.
+
 
 This Dashboard as well as my other dashboards I have created are seen [here](https://public.tableau.com/shared/G78HPBJ2X?:display_count=n&:origin=viz_share_link)
