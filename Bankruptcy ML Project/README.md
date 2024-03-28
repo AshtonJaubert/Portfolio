@@ -32,4 +32,4 @@ Types of ML Models used:
 ## The Results
 I created a report containing the Data Workflow, The bankruptcy status totals, and the scores of each model with assigned heatmaps for each one.
 You can find the report [here](
-  
+  https://hub.knime.com/-/spaces/-/~QFBj6pZc3i1rjR66/
