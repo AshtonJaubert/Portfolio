@@ -35,3 +35,14 @@ I created a report containing the Data Workflow, The bankruptcy status totals, a
 You can find the report [here](https://github.com/AshtonJaubert/Portfolio/blob/main/Bankruptcy%20ML%20Project/ML_Report.pdf)
   
  You can also find the workflow [here](https://hub.knime.com/-/spaces/-/~QFBj6pZc3i1rjR66/)
+
+## Conclusion
+From the results of the report, all the models posted an accuracy score above 90%
+
+The best Performing models were the Random Forest and the Decision Tree with accuracy scores just above 94%
+
+The worst performing models were Logistic Regression and Gradient Boosted Trees with accuracy scores just above 93%
+
+These models can be confidently implemented when used for checking company status if you are a company owner, as well as anticipating risk as a shareholder.
+
+
