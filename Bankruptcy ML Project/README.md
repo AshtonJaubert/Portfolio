@@ -31,5 +31,7 @@ Types of ML Models used:
 - Logistic Regression
 ## The Results
 I created a report containing the Data Workflow, The bankruptcy status totals, and the scores of each model with assigned heatmaps for each one.
-You can find the report [here](
-  https://hub.knime.com/-/spaces/-/~QFBj6pZc3i1rjR66/
+
+You can find the report [here](https://github.com/AshtonJaubert/Portfolio/blob/main/Bankruptcy%20ML%20Project/ML_Report.pdf)
+  
+ You can also find the workflow [here](https://hub.knime.com/-/spaces/-/~QFBj6pZc3i1rjR66/)
