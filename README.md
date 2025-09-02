@@ -1,7 +1,22 @@
 # Ashton Jaubert's Porfolio
 Hello! This Repository contains a list of Projects I've worked on from different Programs such as SQL,Python and Tableau. If you have any questions or feedback I will be happy to answer them on my [Linkedin](https://www.linkedin.com/in/ashtonjaubert/).
 
-# Featured Projects:
+### Projects
+
+#### ⚽️ Soccer Video Analysis System
+
+* **Description:** An advanced computer vision application developed in Python to analyze soccer game footage. The system accurately tracks player and ball movements, assigns teams, and calculates key performance metrics such as player speed and distance traveled.
+* **Technologies:** Python, OpenCV, NumPy
+* **Key Features:**
+    * **Object Detection & Tracking:** Utilized a custom-built tracker to identify and follow players and the ball throughout the video.
+    * **Team Assignment:** Developed an automated system to assign teams to players based on their jersey color.
+    * **Camera Movement Correction:** Implemented an algorithm to estimate and correct for camera motion, ensuring accurate player positioning and tracking.
+    * **Performance Metrics:** Calculated and displayed real-time player speed and distance covered, providing valuable data for performance analysis.
+### Skills
+
+* **Languages:** Python, JavaScript
+* **Libraries & Frameworks:** OpenCV, NumPy, React, Node.js
+* **Tools:** Git, GitHub, Docker, VS Code
 
 ## Card Transaction EDA
 In this Project I used Python to find spending patterns from over 50k tranactions across different Genders,Categories and States and created a interactive dashboard on Tableau to showcase insights found.
