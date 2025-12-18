@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  train_model:
+    cmd: python3 main.py
+    deps:
+    - path: data/ml-100k/Ratings.csv
+      hash: md5
+      md5: 6e47046882bad158b0efbb84cd5cb987
+      size: 1979173
+    - path: main.py
+      hash: md5
+      md5: 8f7fc9b3ec08c266e640f7eb7723f667
+      size: 2614
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 707457fd094a92d24a0e656eb6ed0a6b
+      size: 54
+    - path: models/recommender.pkl
+      hash: md5
+      md5: 1371f19e6c9c6cb2414f428750810d3c
+      size: 4304515

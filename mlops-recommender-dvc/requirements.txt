@@ -1,0 +1,6 @@
+# requirements.txt
+pandas
+scikit-learn
+scikit-surprise 
+numpy<2 # Added this line to enforce a NumPy 1.x version
+dvc

@@ -1,0 +1,9 @@
+stages:
+  train_model:
+    cmd: python3 main.py
+    deps:
+    - data/ml-100k/Ratings.csv
+    - main.py
+    outs:
+    - metrics.json
+    - models/recommender.pkl
