@@ -24,6 +24,6 @@ The model was trained on the MovieLens 100k dataset.
 ### 1. Installation
 Clone the repository and install dependencies:
 ```bash
-git clone [https://github.com/yourusername/repo-name.git](https://github.com/yourusername/repo-name.git)
-cd repo-name
+git clone https://github.com/AshtonJaubert/Portfolio.git
+cd mlops-recommender-dvc
 pip install -r requirements.txt
