@@ -35,6 +35,17 @@ If you have any questions or feedback, I would be happy to connect on [LinkedIn]
 * **File:** [LoanApproval.ipynb](https://github.com/AshtonJaubert/Portfolio/blob/main/LoanApproval.ipynb))
 
 ---
+## 📜 Economic Research & Policy Analysis
+
+### 🎓 Rural-Urban Disparities in Student Achievement
+* **Description:** An econometric study analyzing the academic performance gap between students in rural and non-rural environments. The project investigates the socioeconomic factors contributing to educational inequality.
+* **Methodology:**
+    * **Stata Analysis:** Utilized Stata to clean data and perform statistical modeling.
+    * **Regression Models:** Implemented regression analysis to isolate variables affecting student outcomes and quantify the rural-urban gap.
+* **Files:** [Research Paper (PDF)](https://github.com/AshtonJaubert/Porfolio/blob/main/Rural-Urban%20Disparities%20in%20Student%20Achievement%20(1).pdf) | [Stata Script (.do)](https://github.com/AshtonJaubert/Porfolio/blob/main/FInalProjectDO.do)
+
+---
+
 
 ## 📈 Quantitative Finance & Financial Modeling
 
