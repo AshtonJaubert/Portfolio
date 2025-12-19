@@ -27,12 +27,12 @@ If you have any questions or feedback, I would be happy to connect on [LinkedIn]
     * **Reproducibility:** Managed data and model versioning using **DVC**.
     * **Containerization:** Fully Dockerized application for consistent deployment across environments.
     * **Performance:** Achieved an RMSE of 0.935 on the MovieLens dataset.
-* **Files:** [app.py](https://github.com/AshtonJaubert/Porfolio/blob/main/app.py) | [Dockerfile](https://github.com/AshtonJaubert/Porfolio/blob/main/Dockerfile)
+* **Files:** [app.py](https://github.com/AshtonJaubert/Portfolio/blob/main/mlops-recommender-dvc/app.py) | [Dockerfile](https://github.com/AshtonJaubert/Portfolio/blob/main/mlops-recommender-dvc/Dockerfile)
 
 ### 🏠 Housing Loan Approval Prediction
 * **Description:** A supervised learning project predicting loan approval status based on applicant features (Credit Score, Dependents, Loan Amount).
 * **Key Achievement:** Developed **XGBoost** and **Random Forest** models achieving **98%+ accuracy**.
-* **File:** [LoanApproval.ipynb](https://github.com/AshtonJaubert/Porfolio/blob/main/LoanApproval.ipynb)
+* **File:** [LoanApproval.ipynb](https://github.com/AshtonJaubert/Portfolio/blob/main/LoanApproval.ipynb))
 
 ---
 
@@ -40,21 +40,21 @@ If you have any questions or feedback, I would be happy to connect on [LinkedIn]
 
 ### Portfolio Optimization (Sharpe Ratio)
 * **Description:** Utilized Python and `scipy.optimize` to construct an optimized investment portfolio. The model calculates optimal asset weights to maximize the Sharpe Ratio, balancing risk and return.
-* **File:** [PortfolioOptimization.ipynb](https://github.com/AshtonJaubert/Porfolio/blob/main/PorfolioOptimization.ipynb)
+* **File:** [PortfolioOptimization.ipynb](https://github.com/AshtonJaubert/Portfolio/blob/main/PorfolioOptimization.ipynb)
 
 ### Monte Carlo VaR & CVaR Analysis
 * **Description:** Performed risk management analysis by calculating Value at Risk (VaR) and Conditional Value at Risk (CVaR) using Monte Carlo simulations.
-* **File:** [MonteCarloVaRandCVar.ipynb](https://github.com/AshtonJaubert/Porfolio/blob/main/MonteCarloVaRandCVar.ipynb)
+* **File:** [MonteCarloVaRandCVar.ipynb](https://github.com/AshtonJaubert/Portfolio/blob/main/MonteCarloVaRandCVar.ipynb)
 
 ### Option Pricing Models (Black-Scholes & Binomial)
 * **Description:** Implemented two fundamental valuation models for financial derivatives using Python.
     * **Black-Scholes:** Calculated Call/Put prices using the BSM formula.
     * **Binomial Tree:** Priced options using discrete time-steps and risk-neutral probabilities.
-* **Files:** [Black-ScholesModel.ipynb](https://github.com/AshtonJaubert/Porfolio/blob/main/Black-ScholesModel.ipynb) | [BinomialOptionPricingModel.ipynb](https://github.com/AshtonJaubert/Porfolio/blob/main/BinomialOptionPricingModel.ipynb)
+* **Files:** [Black-ScholesModel.ipynb](https://github.com/AshtonJaubert/Portfolio/blob/main/Black-ScholesModel.ipynb) | [BinomialOptionPricingModel.ipynb](https://github.com/AshtonJaubert/Portfolio/blob/main/BinomialOptionPricingModel.ipynb)
 
 ### NVIDIA vs. Tech Market Analysis
 * **Description:** A comparative market analysis assessing NVIDIA's volatility and historical returns against Microsoft, Apple, and the Nasdaq (QQQ).
-* **File:** [NVIDIAMarketAnalysis.ipynb](https://github.com/AshtonJaubert/Porfolio/blob/main/NVIDIAMarketAnalysis.ipynb)
+* **File:** [NVIDIAMarketAnalysis.ipynb](https://github.com/AshtonJaubert/Portfolio/blob/main/NVIDIAMarketAnalysis.ipynb)
 
 ---
 
@@ -62,12 +62,9 @@ If you have any questions or feedback, I would be happy to connect on [LinkedIn]
 
 ### Card Transaction EDA
 * **Description:** Analyzed spending patterns from over 50,000 transactions. Created an interactive Tableau dashboard to showcase insights across gender, category, and location.
-* **Links:** [Notebook](https://github.com/AshtonJaubert/Porfolio/blob/main/CardTransactions.ipynb) | [Tableau Dashboard](https://public.tableau.com/app/profile/ashton.jaubert/viz/TransactionDataAnalysis_17097954017460/Dashboard1)
+* **Links:** [Notebook](https://github.com/AshtonJaubert/Portfolio/blob/main/CardTransactions.ipynb) | [Tableau Dashboard](https://public.tableau.com/app/profile/ashton.jaubert/viz/TransactionDataAnalysis_17097954017460/Dashboard1)
 
 ### Balance of Trade (SQL)
 * **Description:** Analyzed import and export data for 100+ countries (1960–2021) using MySQL. Utilized complex subqueries and aggregate functions to identify global trade deficits.
-* **File:** [Imports&Exports.sql](https://github.com/AshtonJaubert/Porfolio/blob/main/Imports%26Exports.sql)
+* **File:** [Imports&Exports.sql](https://github.com/AshtonJaubert/Portfolio/blob/main/Imports%26Exports.sql)
 
-### Global GDP Tableau Dashboard
-* **Description:** Interactive dashboard tracking Global GDP values from 1950–2019, featuring year-over-year fluctuation analysis.
-* **Link:** [View Dashboard](https://public.tableau.com/shared/G78HPBJ2X?:display_count=n&:origin=viz_share_link)
