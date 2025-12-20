@@ -9,7 +9,7 @@ Built with **FastAPI**, **Docker**, and **NLTK**, and designed for serverless de
 ## 🚀 Features
 
 * **Real-Time Data Extraction:** Custom-built scraper using `BeautifulSoup` and `Requests` to bypass unreliable third-party APIs.
-* **NLP-Driven Insights:** Utilizes the **VADER** (Valence Aware Dictionary and sEntiment Reasoner) model to detect market sentiment from unstructured text.
+* **NLP-Driven Insights:** Utilizes the **VADER** (Valence Aware Dictionary and Sentiment Reasoner) model to detect market sentiment from unstructured text.
 * **Statistically Significant Sampling:** Analyzes the latest 30 headlines to balance statistical relevance with recency bias (avoiding stale news).
 * **Serverless Architecture:** Wrapped with **Mangum** adapter and containerized with Docker, making it strictly compatible with AWS Lambda.
 
