@@ -42,7 +42,7 @@ If you have any questions or feedback, I would be happy to connect on [LinkedIn]
 * **Methodology:**
     * **Stata Analysis:** Utilized Stata to clean data and perform statistical modeling.
     * **Regression Models:** Implemented regression analysis to isolate variables affecting student outcomes and quantify the rural-urban gap.
-* **Files:** [Research Paper (PDF)](https://github.com/AshtonJaubert/Porfolio/blob/main/Rural-Urban%20Disparities%20in%20Student%20Achievement%20(1).pdf) | [Stata Script (.do)](https://github.com/AshtonJaubert/Porfolio/blob/main/FInalProjectDO.do)
+* **Files:** [Research Paper (PDF)](https://github.com/AshtonJaubert/Portfolio/blob/main/Rural-Urban-Disparities/Research_paper.pdf) | [Stata Script (.do)](https://github.com/AshtonJaubert/Porfolio/blob/main/FInalProjectDO.do)
 
 ---
 
