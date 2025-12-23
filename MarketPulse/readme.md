@@ -1,33 +1,58 @@
-# MarketPulse: Serverless Financial Sentiment API
+# 🌍 MarketPulse: Global Sentiment Analyzer
 
-**MarketPulse** is a lightweight, cloud-native API that provides real-time sentiment analysis for stock tickers. Instead of relying on delayed or expensive financial data feeds, it scrapes the latest news headlines directly from FinViz and uses Natural Language Processing (NLP) to generate immediate "Bullish" or "Bearish" trading signals.
+**MarketPulse** is a full-stack financial intelligence tool that provides real-time sentiment analysis for stock tickers across international markets. It combines a serverless **FastAPI** backend with an interactive **Streamlit** dashboard to scrape, translate, and analyze news headlines from the US, Mexico, and China/Taiwan.
 
-Built with **FastAPI**, **Docker**, and **NLTK**, and designed for serverless deployment on **AWS Lambda**.
+Unlike standard tools that rely on expensive data feeds, MarketPulse scrapes live data from **FinViz** (for US stocks) and **Google News RSS** (for global stocks), automatically translating foreign headlines to English before performing NLP sentiment scoring.
 
 ---
 
-## 🚀 Features
+## 📸 Dashboard Previews
 
-* **Real-Time Data Extraction:** Custom-built scraper using `BeautifulSoup` and `Requests` to bypass unreliable third-party APIs.
-* **NLP-Driven Insights:** Utilizes the **VADER** (Valence Aware Dictionary and Sentiment Reasoner) model to detect market sentiment from unstructured text.
-* **Statistically Significant Sampling:** Analyzes the latest 30 headlines to balance statistical relevance with recency bias (avoiding stale news).
-* **Serverless Architecture:** Wrapped with **Mangum** adapter and containerized with Docker, making it strictly compatible with AWS Lambda.
+| **US Market Analysis (USA)** | **Global Market Analysis (Mexico)** | **Global Market Analysis (China/Taiwan)**
+|:---:|:---:|:---:|
+| *Real-time bullish/bearish signals for US tickers.* | *Sentiment analysis for Spanish-language news.* | *Sentiment analysis for Mandarin-language news.* |
+| ![US View](MarketPulse_App_USA.pdf) | ![Mexico View](MarketPulseGlobalMexico.pdf) | ![China View](MarketPulse_App_SS.pdf)
+
+---
+
+## 🚀 Key Features
+
+* **🌎 Multi-Market Support:**
+    * **US Market:** Scrapes FinViz for major US tickers (e.g., TSLA, NVDA).
+    * **Global Markets:** Scrapes Google News for **Spanish (Mexico)** and **Mandarin (China/Taiwan)** headlines.
+* **🗣️ Automated Translation Pipeline:** Integrates `deep-translator` to detect foreign headlines and translate them to English on-the-fly for accurate VADER analysis.
+* **📊 Interactive Dashboard:** A user-friendly **Streamlit** interface featuring color-coded gauge charts (`Plotly`), sentiment metrics, and raw data displays.
+* **🧠 NLP-Driven Insights:** Utilizes **NLTK VADER** to score unstructured text, categorizing sentiment as *Strong Bullish, Bullish, Neutral, Bearish,* or *Strong Bearish*.
+* **☁️ Serverless Architecture:** The backend is wrapped with **Mangum** and containerized with **Docker**, designed for scalable deployment on **AWS Lambda**.
+
+---
 
 ## 🛠️ Tech Stack
 
-* **Framework:** Python 3.11, FastAPI
-* **Data Acquisition:** Requests, BeautifulSoup4 (Web Scraping)
-* **Machine Learning:** NLTK (VADER Sentiment Analysis)
-* **Deployment:** Docker, AWS Lambda, Mangum (ASGI Adapter)
+### **Frontend**
+* **Streamlit:** Interactive web UI.
+* **Plotly:** Dynamic gauge charts for sentiment visualization.
 
-## ⚡ Quick Start (Local)
+### **Backend**
+* **FastAPI:** High-performance API framework.
+* **BeautifulSoup4:** Web scraping for FinViz (US data).
+* **Feedparser:** Parsing Google News RSS feeds (Global data).
+* **Deep-Translator:** Real-time language translation.
+* **NLTK (VADER):** Sentiment analysis engine.
+* **Mangum:** ASGI adapter for AWS Lambda.
 
-### Prerequisites
+---
+
+## ⚡ Quick Start (Local Development)
+
+The project consists of two parts: the FastAPI backend and the Streamlit frontend. You need to run both to use the dashboard.
+
+### 1. Prerequisites
 * Python 3.11+
-* Docker (Optional, for container testing)
+* Docker (Optional, for container deployment)
 
-### 1. Installation
-Clone the repository and install dependencies.
+### 2. Installation
+Clone the repository and install dependencies:
 
 ```bash
 pip install -r requirements.txt
