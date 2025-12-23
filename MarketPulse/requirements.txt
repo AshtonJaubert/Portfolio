@@ -4,3 +4,7 @@ mangum
 requests
 beautifulsoup4
 nltk
+streamlit
+plotly
+feedparser
+deep-translator
