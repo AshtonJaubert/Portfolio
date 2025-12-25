@@ -15,13 +15,31 @@ I specialize in building production-ready pipelines and applying complex mathema
 | Domain | Tech Stack |
 | :--- | :--- |
 | **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) |
-| **MLOps & Cloud** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) ![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat&logo=amazonaws&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white) ![DVC](https://img.shields.io/badge/DVC-945DD6?style=flat&logo=dvc&logoColor=white) |
+| **MLOps & Cloud** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat&logo=amazonaws&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white) ![DVC](https://img.shields.io/badge/DVC-945DD6?style=flat&logo=dvc&logoColor=white) |
 | **Machine Learning** | ![Scikit-Learn](https://img.shields.io/badge/scikitlearn-F7931E?style=flat&logo=scikit-learn&logoColor=white) ![NLTK](https://img.shields.io/badge/NLTK-2E7D32?style=flat&logo=python&logoColor=white) ![XGBoost](https://img.shields.io/badge/XGBoost-EB4034?style=flat&logo=xgboost&logoColor=white) |
-| **Data Viz** | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white) ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white) |
-
+| **Data Viz** | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white) ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=flat&logo=powerbi&logoColor=black) |
 ---
 
 ## 📈 Quantitative Finance (Featured)
+
+### 📉 [Volatility Pipeline: Automated Iron Condor Backtester](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
+> **End-to-end quantitative research framework for defined-risk volatility trading.**
+
+* **Description:** A Python-based pipeline that ingests option data, calculates a "Fear Gauge" (Vol Rank), and systematically executes **Iron Condors** only during high-volatility regimes (RVVA). It features a **"Reality Check"** engine that stress-tests strategies against slippage and insurance costs.
+* **Research Findings (Reality Check):**
+    The strategy was backtested under "Live Trading" conditions (assuming 40% premium reduction for slippage).
+    | Ticker | Asset Class | Verdict | Sharpe | Return |
+    | :--- | :--- | :--- | :--- | :--- |
+    | **SPYI** | High Income ETF | 🏆 **Holy Grail** | **7.80** | **+27.00%** |
+    | **SPY** | S&P 500 | ✅ Perfect | 7.26 | +23.22% |
+    | **TSM** | Semiconductors | ✅ Production Ready | 3.85 | +12.67% |
+    | **TSLA** | EV/Momentum | ❌ **Untradeable** | -4.09 | -41.79% |
+* **Key Insights:**
+    * **Compound Alpha:** **SPYI** outperformed **SPY** by applying the volatility filter on top of an existing yield strategy.
+    * **The Cost of Safety:** Buying protective wings for **NVDA** reduced returns by ~75% compared to undefined-risk strategies (Strangle), highlighting the cost of tail-risk insurance.
+    * **Momentum Risk:** **TSLA** failed due to "Gamma explosions" where price velocity exceeded short strikes faster than Theta decay could compensate.
+* **Tech Stack:** Python, SQLite, SQLAlchemy, Pandas, Matplotlib, AWS (Roadmap).
+* **Code:** [View Project](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
 
 ### 🌍 [MarketPulse: Global Sentiment Analyzer](https://github.com/AshtonJaubert/Portfolio/tree/main/MarketPulse)
 > **Full-stack NLP application for tracking international market sentiment.**
