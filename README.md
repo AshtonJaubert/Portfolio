@@ -22,23 +22,23 @@ I specialize in building production-ready pipelines and applying complex mathema
 
 ## 📈 Quantitative Finance (Featured)
 
-### 📉 [Volatility Pipeline: Automated Iron Condor Backtester](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
-> **End-to-end quantitative research framework for defined-risk volatility trading.**
+### 📉 [Volatility Pipeline: Automated Iron Condor System](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
+> **Institutional-grade automated trading system deployed on AWS.**
 
-* **Description:** A Python-based pipeline that ingests option data, calculates a "Fear Gauge" (Vol Rank), and systematically executes **Iron Condors** only during high-volatility regimes (RVVA). It features a **"Reality Check"** engine that stress-tests strategies against slippage and insurance costs.
-* **Research Findings (Reality Check):**
-    The strategy was backtested under "Live Trading" conditions (assuming 40% premium reduction for slippage).
-    | Ticker | Asset Class | Verdict | Sharpe | Return |
+* **Description:** A Python-based trading bot that hunts for "expensive fear" (Volatility Rank > 75%) and systematically sells **Iron Condors** to capture premium. The system runs 24/7 on AWS EC2, manages risk with automated stop-losses, and features a live Streamlit dashboard for real-time P&L monitoring.
+* **Research Findings (2024 Market Test):**
+    The strategy was stress-tested against 2024 market data with strict active management rules (Take Profit @ 80% | Stop Loss @ -85%).
+    | Ticker | Asset Class | Total Return | Sharpe Ratio | Verdict |
     | :--- | :--- | :--- | :--- | :--- |
-    | **SPYI** | High Income ETF | 🏆 **Holy Grail** | **7.80** | **+27.00%** |
-    | **SPY** | S&P 500 | ✅ Perfect | 7.26 | +23.22% |
-    | **TSM** | Semiconductors | ✅ Production Ready | 3.85 | +12.67% |
-    | **TSLA** | EV/Momentum | ❌ **Untradeable** | -4.09 | -41.79% |
-* **Key Insights:**
-    * **Compound Alpha:** **SPYI** outperformed **SPY** by applying the volatility filter on top of an existing yield strategy.
-    * **The Cost of Safety:** Buying protective wings for **NVDA** reduced returns by ~75% compared to undefined-risk strategies (Strangle), highlighting the cost of tail-risk insurance.
-    * **Momentum Risk:** **TSLA** failed due to "Gamma explosions" where price velocity exceeded short strikes faster than Theta decay could compensate.
-* **Tech Stack:** Python, SQLite, SQLAlchemy, Pandas, Matplotlib, AWS (Roadmap).
+    | **IWM** | Small Caps | **+5.8%** | **3.54** | 🏆 Best Risk/Reward |
+    | **TSLA** | EV/Momentum | **+7.7%** | **3.08** | 🚀 High Alpha |
+    | **GLD** | Gold | **+4.4%** | **3.16** | ✅ Safe Haven |
+    | **SPY** | S&P 500 | **+5.3%** | **2.52** | ✅ Consistent |
+* **Key Features:**
+    * **Live Execution:** Fully automated trading via **Alpaca API**, running continuously on AWS.
+    * **Active Management:** Solved the "Tesla Problem" by implementing aggressive stop-losses, turning a previously losing asset into the highest grossing performer.
+    * **Web Dashboard:** Custom **Streamlit** interface for monitoring open positions and account equity in real-time.
+* **Tech Stack:** Python, AWS EC2, Streamlit, Alpaca API, SQLite, Pandas.
 * **Code:** [View Project](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
 
 ### 🌍 [MarketPulse: Global Sentiment Analyzer](https://github.com/AshtonJaubert/Portfolio/tree/main/MarketPulse)
