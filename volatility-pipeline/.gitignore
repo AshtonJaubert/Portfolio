@@ -1,0 +1,16 @@
+# --- Python Basics ---
+__pycache__/
+*.pyc
+
+# --- Mac System Files ---
+.DS_Store
+
+# --- Security (Ignore files with keys) ---
+.env
+secrets.py
+
+# --- Database (Don't share your trade history) ---
+quant.db
+
+# --- Logs ---
+*.log
