@@ -37,7 +37,7 @@ The system is divided into three autonomous components:
 The strategy was stress-tested against 2024 market data with strict active management rules (**Take Profit @ 80%** | **Stop Loss @ -85%**).
 
 **Aggregate Performance:**
-* **🏆 Total Profit:** $40,899.93
+* **🏆 Total Profit:** $40,899.93 (100k buying power)
 * **🎯 Win Rate:** 78.3%
 
 | Ticker | Asset Class | Total Return | Sharpe Ratio | Max Drawdown | Verdict |
