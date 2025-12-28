@@ -1,66 +1,73 @@
-# **Volatility Pipeline: Automated Iron Condor Backtester**
+# **Volatility Pipeline: Automated Iron Condor System**
 
+[![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-Click_Here-success?style=for-the-badge&logo=streamlit)](http://13.58.237.61:8501/)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
-![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite)
-![Pandas](https://img.shields.io/badge/pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange?style=for-the-badge&logo=amazon-aws)
+![AWS](https://img.shields.io/badge/AWS-EC2%20%2F%20Lambda-orange?style=for-the-badge&logo=amazon-aws)
+![Alpaca](https://img.shields.io/badge/Alpaca-Live%20Execution-yellow?style=for-the-badge&logo=alpaca)
 
 ## **📖 Project Overview**
-The **Volatility Pipeline** is an end-to-end quantitative research framework designed to ingest financial data, analyze volatility regimes, and backtest defined-risk options strategies.
+The **Volatility Pipeline** is an institutional-grade quantitative trading framework designed to exploit mean-reversion in volatility. It hunts for "expensive fear" in the options market and systematically sells **Iron Condors** when statistical edge is maximized.
 
-he system implements a **Relative Value Volatility Analysis (RVVA)** methodology. It ingests real-time option data to calculate a "Fear Gauge" (Volatility Percentile) and systematically executes **Iron Condors** only when statistical edge is highest (Top 20% Volatility). The pipeline includes a "Reality Check" stress test that accounts for slippage and insurance costs (buying protective wings).
+Unlike typical retail bots, this system implements a **Relative Value Volatility Analysis (RVVA)** engine. It calculates a "Fear Gauge" (20-Day Rolling Volatility Rank) for every asset in the portfolio. When volatility hits the **top 75th percentile**, the bot executes defined-risk spreads to capture premium, while automatically hedging tail risk.
+
+The system is fully deployed on **AWS**, featuring a continuous trading loop and a real-time **Streamlit Dashboard** for P&L monitoring.
 
 ## **🚀 Key Features**
-* **Modular Architecture:** Separation of concerns between Data Ingestion (`data_ingestion.py`), Analytics (`analytics.py`), and Strategy execution (`strategy.py`).
-* **Volatility Hunting Logic:** Automatically calculates a 20-day rolling volatility rank to determine if volatility is "Cheap" or "Expensive" before trading.
-* **Defined-Risk Engine:** Converts theoretical Short Strangles into Iron Condors by buying 10% OTM wings to cap tail risk.
-* **Persistent Storage:** Uses `SQLAlchemy` and `SQLite` to maintain a local ledger of option chains and trade history.
-* **Automated Reporting:** Generates equity curves, calculates Sharpe Ratios, and identifies "Green Zone" vs. "Red Zone" assets.
-## **🔬 Research Findings & Reality Check**
-The strategy was stress-tested under "Live Trading" conditions over a 1-year period. The following matrix details the performance after applying the **"Reality Gap"** constraints (assuming a 40% reduction in premium capture to account for slippage and wing costs).
+* **☁️ Cloud-Native Execution:** Runs 24/7 on AWS EC2/Lambda using `auto_trader.py`, ensuring zero downtime for market scans.
+* **📊 Live Strategy Dashboard:** A `Streamlit` interface provides real-time visualization of Open Positions, P&L, Buying Power, and "Wait vs. Trade" zones.
+* **🧠 Volatility Hunting Logic:**
+    * **Entry:** Volatility Rank > 75% (Statistical Extremes).
+    * **Sizing:** Dynamic position sizing based on Portfolio Volatility Target (20%).
+    * **Execution:** Automated multi-leg ordering (Iron Condors) via Alpaca API.
+* **🛡️ Risk Management Engine:**
+    * **Active Management:** Automated profit taking at +80% and Stop Loss at -85%.
+    * **Reality Check:** Accounts for slippage and "Wing Drag" (cost of protection).
+* **💾 Persistent Ledger:** Uses `SQLite` for local trade logging and backtest data storage.
+
+## **⚡ System Architecture**
+The system is divided into three autonomous components:
+
+| Component | File | Role |
+| :--- | :--- | :--- |
+| **The Manager** | `auto_trader.py` | Infinite loop that scans the market every 15 mins. It handles signal generation, risk checks, and submits orders to Alpaca. |
+| **The Monitor** | `Dashboard.py` | A web-based GUI (hosted on port 8501) for human oversight. Connects to Alpaca in Read-Only mode to display equity curves. |
+| **The Lab** | `main.py` | The research pipeline. Used for backtesting new hypotheses (e.g., "What if we trade only on Tuesdays?") without risking capital. |
+
+## **🔬 Research Findings (2024 Market Test)**
+The strategy was stress-tested against 2024 market data with strict active management rules (**Take Profit @ 80%** | **Stop Loss @ -85%**).
+
+**Aggregate Performance:**
+* **🏆 Total Profit:** $40,899.93
+* **🎯 Win Rate:** 78.3%
 
 | Ticker | Asset Class | Total Return | Sharpe Ratio | Max Drawdown | Verdict |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **SPYI** | High Income ETF | **+27.00%** | **7.80** | 0.00% | 🏆 The Holy Grail |
-| **SPY** | S&P 500 | **+23.22%** | **7.26** | 0.00% | ✅ Perfect |
-| **TSM** | Semiconductors | **+12.67%** | **3.85** | -2.96% | ✅ Production Ready |
-| **NVDA** | AI/Tech | **+6.72%** | **1.90** | -6.30% | ⚠️ Viable (Low Yield) |
-| **MSFT** | Tech | **+0.45%** | **0.26** | -17.57% | ⚠️ Inefficient |
-| **TSLA** | EV/Momentum | **-41.79%** | **-4.09** | -42.19% | ❌ UNTRADEABLE |
+| **IWM** | Small Caps | **+5.8%** | **3.54** | -0.8% | 🏆 Best Risk/Reward |
+| **TSLA** | EV/Momentum | **+7.7%** | **3.08** | -0.7% | 🚀 High Alpha |
+| **GLD** | Gold | **+4.4%** | **3.16** | -0.3% | ✅ Safe Haven |
+| **SPY** | S&P 500 | **+5.3%** | **2.52** | -0.7% | ✅ Consistent |
+| **DIA** | Dow Jones | **+4.2%** | **2.64** | -0.5% | ✅ Stable |
+| **QQQ** | Tech | **+4.2%** | **2.20** | -1.4% | ✅ Solid |
+| **TLT** | Bonds | **+2.2%** | **2.71** | -0.3% | 🛡️ Low Vol Hedge |
+| **SLV** | Silver | **+3.5%** | **1.33** | -1.7% | ⚠️ Lower Efficiency |
 
 ### **Critical Analysis & Insights**
-* **The "Compound Alpha" Discovery:** SPYI (NEOS S&P 500 High Income ETF) outperformed SPY (+27% vs +23%). By applying our volatility filter on top of their existing strategy, we created a "Compound Alpha" effect—trading a volatility product only during peak volatility windows.
-* **The Cost of Safety ("Wing Drag"):** A comparative analysis on **NVDA** revealed the high cost of defined risk.
-    * *Theory (Strangle):* Sharpe Ratio **4.8**
-    * *Reality (Iron Condor):* Sharpe Ratio **1.9**
-    * *Conclusion:* Buying protective wings reduced returns by ~75%. While necessary for safety, it makes single-stock volatility trading capital inefficient compared to indices.
-* **Momentum Risk (The Tesla Case):** The strategy failed on **TSLA** (-41% return). Momentum-driven assets experience "Gamma explosions" where price velocity exceeds the short strikes faster than Theta decay can compensate.
-
-## **🔮 Roadmap: Cloud & Real-Time Trading**
-The next phase of this project focuses on moving from backtesting to forward-testing in a live environment.
-
-* **☁️ AWS Deployment:**
-    * Migrate the pipeline to **AWS EC2** or **AWS Lambda** to ensure 24/7 uptime and continuous data ingestion.
-    * Automate the `main.py` execution using **AWS EventBridge** (Cron) to run daily market scans.
-* **🔔 Discord Alerts:**
-    * Integrate Discord Webhooks to broadcast real-time signals.
-    * **Goal:** Receive an instant notification on my phone whenever the "Fear Gauge" (Vol Rank) crosses the 80% threshold, allowing for manual execution of the strategy.
-* **📈 Forward Testing:**
-    * Connect to a paper-trading API to track the "Reality Gap" in real-time execution versus the backtest model.
+* **The Tesla Redemption:** Previous versions of this algorithm failed on TSLA due to gamma risk. The new "Active Management" logic (Stop Loss @ -85%) successfully tamed the tail risk, turning TSLA into the highest grossing asset (+7.7%) with a surprisingly high Sharpe Ratio (3.08).
+* **Small Cap Dominance:** IWM (Russell 2000) proved to be the ideal environment for this strategy (Sharpe 3.54), likely due to its mean-reverting nature in 2024 compared to the directional trend of Tech (QQQ).
+* **Safety First:** The maximum drawdown across the entire portfolio never exceeded **1.7%** (SLV), proving the efficacy of the defined-risk Iron Condor structure combined with aggressive stop losses.
 
 ## **📂 Project Structure**
 ```bash
-
 volatility-pipeline/
+├── auto_trader.py          # 🤖 LIVE BOT: The infinite loop for AWS
+├── Dashboard.py            # 📊 GUI: Streamlit Web Dashboard
+├── config.py               # ⚙️ SETTINGS: API Keys & Portfolio targets
+├── main.py                 # 🔬 LAB: Backtesting pipeline entry point
+├── requirements.txt        # Dependencies (yfinance, alpaca-py, streamlit)
+├── quant.db                # Database (SQLite)
 ├── src/
-│   ├── data_ingestion.py   # ETL: Fetches option chains & stores in SQLite
-│   ├── analytics.py        # logic: Calculates Vol Rank & Put/Call Ratios
-│   ├── strategy.py         # Engine: Simulates Iron Condor execution
-│   └── __init__.py
-├── reports/                # Generated performance charts (PNGs)
-├── config.py               # Configuration (Target tickers, DB paths)
-├── main.py                 # Pipeline entry point
-├── research.ipynb          # Jupyter Notebook for comparative analysis
-├── test_models.py          # Unit tests for DB connection & logic
-├── quant.db                # SQLite database
-└── requirements.txt        # Python dependencies
+│   ├── data_ingestion.py   # ETL: Fetches option chains
+│   ├── analytics.py        # Math: Calculates Vol Rank
+│   ├── strategy.py         # Backtester Logic
+│   └── execution.py        # Execution: Alpaca API Interface
+└── reports/                # Generated performance charts
