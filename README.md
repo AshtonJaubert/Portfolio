@@ -43,7 +43,7 @@ I specialize in building production-ready pipelines and applying complex mathema
     | **GLD** | Gold | **+4.4%** | **3.16** | ✅ Safe Haven |
     | **SPY** | S&P 500 | **+5.3%** | **2.52** | ✅ Consistent |
 * **Tech Stack:** Python, AWS EC2, Streamlit, Alpaca API (Paper/Live), SQLite, Pandas, Plotly.
-* **Code:** [View Project](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
+* **Code:** [View Project](https://github.com/AshtonJaubert/Portfolio/tree/main/volatility-pipeline)
 
 ### 🌍 [MarketPulse: Global Sentiment Analyzer](https://github.com/AshtonJaubert/Portfolio/tree/main/MarketPulse)
 > **Full-stack NLP application for tracking international market sentiment.**
