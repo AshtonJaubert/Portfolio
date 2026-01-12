@@ -1,0 +1,14 @@
+numpy
+pandas
+scipy
+yfinance
+matplotlib
+sqlalchemy
+pymysql
+alpaca-py
+streamlit
+plotly
+schedule
+QuantLib      
+quantstats    
+loguru
