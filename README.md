@@ -1,4 +1,4 @@
-#  Ashton Jaubert's Portfolio
+# 📊 Ashton Jaubert's Portfolio
 
 **Data Analyst | MLOps Engineer | Quantitative Finance Enthusiast**
 
@@ -18,27 +18,31 @@ I specialize in building production-ready pipelines and applying complex mathema
 | **MLOps & Cloud** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat&logo=amazonaws&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white) ![DVC](https://img.shields.io/badge/DVC-945DD6?style=flat&logo=dvc&logoColor=white) |
 | **Machine Learning** | ![Scikit-Learn](https://img.shields.io/badge/scikitlearn-F7931E?style=flat&logo=scikit-learn&logoColor=white) ![NLTK](https://img.shields.io/badge/NLTK-2E7D32?style=flat&logo=python&logoColor=white) ![XGBoost](https://img.shields.io/badge/XGBoost-EB4034?style=flat&logo=xgboost&logoColor=white) |
 | **Data Viz** | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white) ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=flat&logo=powerbi&logoColor=black) |
+
 ---
 
 ## 📈 Quantitative Finance (Featured)
 
 ### 📉 [Volatility Pipeline: Automated Iron Condor System](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
-> **Institutional-grade automated trading system deployed on AWS.**
+> **Full-stack algorithmic trading platform deployed on AWS.**
 
-* **Description:** A Python-based trading bot that hunts for "expensive fear" (Volatility Rank > 75%) and systematically sells **Iron Condors** to capture premium. The system runs 24/7 on AWS EC2, manages risk with automated stop-losses, and features a live Streamlit dashboard for real-time P&L monitoring.
+* **Description:** An automated trading system that capitalizes on mean reversion in volatility. The bot monitors asset volatility rankings (20-day lookback) and systematically executes **Iron Condors** when volatility is historically high (>75th percentile). The system is hosted on **AWS EC2**, featuring a custom **Streamlit Dashboard** for live P&L tracking and signal visualization.
+* **System Architecture:**
+    * **Signal Generation:** Calculates rolling volatility and percentile ranks. Triggers entries when `Vol Rank > 0.75` and actively manages position sizing based on risk metrics.
+    * **Execution Engine:** Interacts with the **Alpaca Trading API** to submit complex **Multi-Leg Orders** (Long/Short Puts & Calls) in a single atomic transaction.
+    * **Risk Management:** Active monitoring loop checks positions every 15 minutes, enforcing strict exits at **+80% Profit** or **-85% Loss**.
+* **Live Dashboard (Streamlit):**
+    * **Institutional Desk:** Real-time view of Net Liquidation, Buying Power, and Open Positions.
+    * **Strategy Logic:** Visualizes the "Vol Rank" of specific tickers to determine if they are in the "Trade Zone" or "Wait Zone".
 * **Research Findings (2024 Market Test):**
-    The strategy was stress-tested against 2024 market data with strict active management rules (Take Profit @ 80% | Stop Loss @ -85%).
+    The strategy was stress-tested against 2024 market data to validate the edge of selling premium during high-volatility regimes.
     | Ticker | Asset Class | Total Return | Sharpe Ratio | Verdict |
     | :--- | :--- | :--- | :--- | :--- |
     | **IWM** | Small Caps | **+5.8%** | **3.54** | 🏆 Best Risk/Reward |
     | **TSLA** | EV/Momentum | **+7.7%** | **3.08** | 🚀 High Alpha |
     | **GLD** | Gold | **+4.4%** | **3.16** | ✅ Safe Haven |
     | **SPY** | S&P 500 | **+5.3%** | **2.52** | ✅ Consistent |
-* **Key Features:**
-    * **Live Execution:** Fully automated trading via **Alpaca API**, running continuously on AWS.
-    * **Active Management:** Solved the "Tesla Problem" by implementing aggressive stop-losses, turning a previously losing asset into the highest grossing performer.
-    * **Web Dashboard:** Custom **Streamlit** interface for monitoring open positions and account equity in real-time.
-* **Tech Stack:** Python, AWS EC2, Streamlit, Alpaca API, SQLite, Pandas.
+* **Tech Stack:** Python, AWS EC2, Streamlit, Alpaca API (Paper/Live), SQLite, Pandas, Plotly.
 * **Code:** [View Project](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
 
 ### 🌍 [MarketPulse: Global Sentiment Analyzer](https://github.com/AshtonJaubert/Portfolio/tree/main/MarketPulse)
