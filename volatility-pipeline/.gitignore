@@ -11,6 +11,6 @@ secrets.py
 
 # --- Database (Don't share your trade history) ---
 quant.db
-
+config.py
 # --- Logs ---
 *.log
