@@ -22,6 +22,18 @@ I specialize in building production-ready pipelines and applying complex mathema
 ---
 
 ##  Quantitative Finance (Featured)
+###  [Institutional Alpha Pipeline: AFML Implementation](https://github.com/AshtonJaubert/Portfolio/tree/main/Quant-Alpha-Pipeline)
+> **High-conviction trading system based on "Advances in Financial Machine Learning" by Marcos López de Prado.**
+
+* **Description:** A mathematically rigorous alpha-generation pipeline solving the core challenges of financial ML: Non-stationarity, Sample Dependency, and Look-ahead Bias.
+* **Technical Highlights:**
+    * **Fractional Differentiation ($d=0.3$):** Stationarizes price series while preserving maximum memory.
+    * **Purged K-Fold Cross-Validation:** Custom engine with a **1% Embargo period** to eliminate data leakage.
+    * **Meta-Labeling Veto:** Two-stage signal process with a **60% Confidence Veto** threshold.
+* **Out-of-Sample Performance (2023-2025):**
+    * **SPY (S&P 500):** **48.98% Accuracy** | 50.83% Betting Activity | Top Feature: `Price_lag_3`.
+    * **QQQ (Nasdaq 100):** **49.03% Accuracy** | 53.19% Betting Activity | Top Feature: `VIX`.
+* **Code:** [View Project](https://github.com/AshtonJaubert/Quant-Alpha-Pipeline)
 
 ###  [Volatility Pipeline: Automated Iron Condor System](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
 > **Full-stack algorithmic trading platform deployed on AWS.**
