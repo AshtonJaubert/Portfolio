@@ -1,4 +1,4 @@
-# 📊 Ashton Jaubert's Portfolio
+# Ashton Jaubert's Portfolio
 
 **Data Analyst | MLOps Engineer | Quantitative Finance Enthusiast**
 
@@ -10,7 +10,7 @@ I specialize in building production-ready pipelines and applying complex mathema
 
 ---
 
-## 🛠 Skills & Tools
+##  Skills & Tools
 
 | Domain | Tech Stack |
 | :--- | :--- |
@@ -21,9 +21,9 @@ I specialize in building production-ready pipelines and applying complex mathema
 
 ---
 
-## 📈 Quantitative Finance (Featured)
+##  Quantitative Finance (Featured)
 
-### 📉 [Volatility Pipeline: Automated Iron Condor System](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
+###  [Volatility Pipeline: Automated Iron Condor System](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
 > **Full-stack algorithmic trading platform deployed on AWS.**
 
 * **Description:** An automated trading system that capitalizes on mean reversion in volatility. The bot monitors asset volatility rankings (20-day lookback) and systematically executes **Iron Condors** when volatility is historically high (>75th percentile). The system is hosted on **AWS EC2**, featuring a custom **Streamlit Dashboard** for live P&L tracking and signal visualization.
@@ -45,7 +45,7 @@ I specialize in building production-ready pipelines and applying complex mathema
 * **Tech Stack:** Python, AWS EC2, Streamlit, Alpaca API (Paper/Live), SQLite, Pandas, Plotly.
 * **Code:** [View Project](https://github.com/AshtonJaubert/Portfolio/tree/main/volatility-pipeline)
 
-### 🌍 [MarketPulse: Global Sentiment Analyzer](https://github.com/AshtonJaubert/Portfolio/tree/main/MarketPulse)
+###  [MarketPulse: Global Sentiment Analyzer](https://github.com/AshtonJaubert/Portfolio/tree/main/MarketPulse)
 > **Full-stack NLP application for tracking international market sentiment.**
 
 * **Description:** A serverless application that scrapes financial news from multiple regions, translates foreign headlines, and performs sentiment analysis to gauge global market mood.
@@ -77,9 +77,9 @@ I specialize in building production-ready pipelines and applying complex mathema
 
 ---
 
-## 🚀 MLOps & Machine Learning
+##  MLOps & Machine Learning
 
-### 🎬 [MLOps Recommendation System (Collaborative Filtering)](https://github.com/AshtonJaubert/Portfolio/tree/main/mlops-recommender-dvc)
+###  [MLOps Recommendation System (Collaborative Filtering)](https://github.com/AshtonJaubert/Portfolio/tree/main/mlops-recommender-dvc)
 > **End-to-end MLOps pipeline serving real-time predictions.**
 
 * **The Build:** Trains an SVD model and serves predictions via a **FastAPI** microservice.
@@ -89,16 +89,16 @@ I specialize in building production-ready pipelines and applying complex mathema
     * **Performance:** Achieved RMSE of **0.935** on MovieLens dataset.
 * **Code:** [app.py](https://github.com/AshtonJaubert/Portfolio/blob/main/mlops-recommender-dvc/app.py) | [Dockerfile](https://github.com/AshtonJaubert/Portfolio/blob/main/mlops-recommender-dvc/Dockerfile)
 
-### 🏠 [Housing Loan Approval Prediction](https://github.com/AshtonJaubert/Portfolio/blob/main/LoanApproval.ipynb)
+###  [Housing Loan Approval Prediction](https://github.com/AshtonJaubert/Portfolio/blob/main/LoanApproval.ipynb)
 * **Description:** Supervised learning project predicting loan approval status based on applicant metrics (Credit Score, Dependents, Loan Amount).
 * **Performance:** Developed **XGBoost** and **Random Forest** models achieving **98%+ accuracy**.
 * **Code:** [View Notebook](https://github.com/AshtonJaubert/Portfolio/blob/main/LoanApproval.ipynb)
 
 ---
 
-## 📜 Economic Research & Policy Analysis
+##  Economic Research & Policy Analysis
 
-### 🎓 [Rural-Urban Disparities in Student Achievement](https://github.com/AshtonJaubert/Portfolio/blob/main/Rural-Urban-Disparities/Research_paper.pdf)
+###  [Rural-Urban Disparities in Student Achievement](https://github.com/AshtonJaubert/Portfolio/blob/main/Rural-Urban-Disparities/Research_paper.pdf)
 > **An econometric study on educational inequality.**
 
 * **Objective:** Investigated socioeconomic factors contributing to the performance gap between rural and non-rural students.
