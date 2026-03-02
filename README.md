@@ -34,6 +34,66 @@ I specialize in building production-ready pipelines and applying complex mathema
     * **SPY (S&P 500):** **48.98% Accuracy** | 50.83% Betting Activity | Top Feature: `Price_lag_3`.
     * **QQQ (Nasdaq 100):** **49.03% Accuracy** | 53.19% Betting Activity | Top Feature: `VIX`.
 * **Code:** [View Project](https://github.com/AshtonJaubert/Quant-Alpha-Pipeline)
+### [Hierarchical Risk Parity (HRP) Portfolio Optimizer](https://github.com/AshtonJaubert/Portfolio/tree/main/HRPOtimizer.py)
+
+An advanced machine learning approach to asset allocation that solves the instability of traditional Mean-Variance Optimization. This project implements a professional-grade Hierarchical Risk Parity (HRP) optimizer based on the methodology proposed by Marcos López de Prado.
+
+### Overview
+Financial correlation matrices are often ill-conditioned, meaning small changes in data lead to massive, nonsensical swings in portfolio weights. Unlike traditional Markowitz optimization, which is highly sensitive to noise and requires the inversion of a covariance matrix, HRP uses unsupervised machine learning to build a robust portfolio based on the hierarchical structure of the market.
+
+HRP addresses this by:
+1. **Clustering:** Grouping assets into a hierarchical tree (dendrogram) based on their correlation DNA.
+2. **Matrix Seriation:** Reordering the covariance matrix so that similar assets are adjacent.
+3. **Recursive Bisection:** Allocating risk across the branches of the tree rather than individual assets.
+
+### Key Features
+* **Automated Data Pipeline:** Integrated with `yfinance` to fetch adjusted close prices and handle MultiIndex data structures.
+* **Unsupervised Learning:** Utilizes `scipy.cluster.hierarchy` for Single-Linkage clustering to identify market topology.
+* **Recursive Risk Allocation:** Implements the full recursive bisection algorithm to distribute "risk budgets" across clusters.
+* **Backtesting Suite:** Comparative analysis against an Equal-Weight ($1/N$) benchmark.
+* **Visualization:** Generates high-quality Dendrograms and Weight Distribution charts.
+
+### Technical Implementation
+```bash
+from hrp_optimizer import HRPOptimizer
+
+# Define your universe
+assets = ['SPY', 'QQQ', 'TLT', 'GLD', 'VNQ', 'XLE']
+
+# Initialize and Optimize
+hrp = HRPOptimizer(assets, start_date='2020-01-01', end_date='2025-01-01')
+weights, linkage = hrp.optimize()
+
+# Generate Analytics
+hrp.run_analytics(linkage)
+```
+### The Distance Metric
+Instead of raw correlation, we use a distance metric $d_{i,j}=\sqrt{0.5(1-\rho_{i,j})}$ to ensure the "closeness" of assets satisfies the requirements for clustering.
+
+### Recursive Bisection
+The model starts at the top of the tree (all assets) and splits them into two clusters. It assigns weights to each cluster based on their inverse variance:
+
+$$\alpha=1-\frac{V_{1}}{V_{1}+V_{2}}$$
+
+Where $V$ is the variance of the cluster. This process repeats down the branches until individual asset weights are determined.
+
+### Performance & Results
+In backtests covering the high-volatility regime of 2020-2025, the HRP model successfully identified risk clusters in Technology (AAPL, MSFT) and rotated capital into diversifiers like Gold (GLD) and Treasuries (TLT).
+
+| Metric | HRP Portfolio | Benchmark (1/N) |
+| :--- | :--- | :--- |
+| **Annualized Volatility** | ~12.50% | ~18.20% |
+| **Max Drawdown** | Significantly Lower | High |
+| **Stability** | High | Low |
+
+**Usage**
+
+### Installation
+To run this project, ensure you have the following Python libraries installed:
+```bash
+pip install numpy pandas yfinance matplotlib scipy
+```
+---
 
 ###  [Volatility Pipeline: Automated Iron Condor System](https://github.com/AshtonJaubert/Portfolio/tree/main/VolatilityPipeline)
 > **Full-stack algorithmic trading platform deployed on AWS.**
