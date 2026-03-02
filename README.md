@@ -50,10 +50,10 @@ I specialize in building production-ready pipelines and applying complex mathema
     The strategy was stress-tested against 2024 market data to validate the edge of selling premium during high-volatility regimes.
     | Ticker | Asset Class | Total Return | Sharpe Ratio | Verdict |
     | :--- | :--- | :--- | :--- | :--- |
-    | **IWM** | Small Caps | **+5.8%** | **3.54** | 🏆 Best Risk/Reward |
-    | **TSLA** | EV/Momentum | **+7.7%** | **3.08** | 🚀 High Alpha |
-    | **GLD** | Gold | **+4.4%** | **3.16** | ✅ Safe Haven |
-    | **SPY** | S&P 500 | **+5.3%** | **2.52** | ✅ Consistent |
+    | **IWM** | Small Caps | **+5.8%** | **3.54** |  Best Risk/Reward |
+    | **TSLA** | EV/Momentum | **+7.7%** | **3.08** |  High Alpha |
+    | **GLD** | Gold | **+4.4%** | **3.16** |  Safe Haven |
+    | **SPY** | S&P 500 | **+5.3%** | **2.52** |  Consistent |
 * **Tech Stack:** Python, AWS EC2, Streamlit, Alpaca API (Paper/Live), SQLite, Pandas, Plotly.
 * **Code:** [View Project](https://github.com/AshtonJaubert/Portfolio/tree/main/volatility-pipeline)
 
@@ -121,7 +121,7 @@ I specialize in building production-ready pipelines and applying complex mathema
 
 ---
 
-## 📊 Data Analysis & Visualization
+##  Data Analysis & Visualization
 
 ### [Card Transaction EDA](https://public.tableau.com/app/profile/ashton.jaubert/viz/TransactionDataAnalysis_17097954017460/Dashboard1)
 * **Description:** Analyzed spending patterns from 50,000+ transactions. Created an interactive Dashboard to showcase insights across gender, category, and location.
