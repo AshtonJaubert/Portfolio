@@ -18,7 +18,7 @@ The project addresses the core challenges of financial machine learning: **Non-s
 
 * **Equivalent Frequency Bet Sizing:** Dynamically scales position sizes based on the Meta-Model's conviction using the Normal CDF scaling method.
 
-## 📊 Strategy Performance Report
+## Strategy Performance Report
 
 The pipeline was tested out-of-sample (OOS) for the 2023-2025 period. By applying the 60% confidence veto, the strategy identifies high-conviction regimes while staying in cash during high-noise periods.
 
