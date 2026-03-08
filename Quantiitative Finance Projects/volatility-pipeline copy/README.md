@@ -56,7 +56,7 @@ The strategy was stress-tested against 2024 market data with strict active manag
 * **Small Cap Dominance:** IWM (Russell 2000) proved to be the ideal environment for this strategy (Sharpe 3.54), likely due to its mean-reverting nature in 2024 compared to the directional trend of Tech (QQQ).
 * **Safety First:** The maximum drawdown across the entire portfolio never exceeded **1.7%** (SLV), proving the efficacy of the defined-risk Iron Condor structure combined with aggressive stop losses.
 
-## **📂 Project Structure**
+## ** Project Structure**
 ```bash
 volatility-pipeline/
 ├── auto_trader.py          # 🤖 LIVE BOT: The infinite loop for AWS
