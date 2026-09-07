@@ -37,8 +37,8 @@ Based on the empirical evidence, attracting aggregate FDI is insufficient for ho
 * **Scale Psychometric Credit Scoring:** Adopt models like Ethiopia's WEDP to bypass traditional collateral requirements and democratize credit for rural SMEs.
 * **Enhance Domestic Saving Incentives:** Democratize access to the financial system via zero-fee postal banking and mobile money platforms to capture unbanked rural capital [cite: 1].
 
-## 📖 Theoretical Frameworks Referenced
-* **Harrod-Domar & Solow-Swan Neo-Classical Growth Models** [cite: 1]
-* **Lewis Dual-Sector Model & Harris-Todaro Model of Migration** [cite: 1]
-* **Michael Kremer's O-Ring Theory of Economic Development** [cite: 1]
-* **Amartya Sen's Capability Approach** [cite: 1]
+##  Theoretical Frameworks Referenced
+* **Harrod-Domar & Solow-Swan Neo-Classical Growth Models**
+* **Lewis Dual-Sector Model & Harris-Todaro Model of Migration** 
+* **Michael Kremer's O-Ring Theory of Economic Development**
+* **Amartya Sen's Capability Approach** 
